@@ -39,13 +39,26 @@ a:hover{color:var(--hcb-marsh-dark)}
 .hcb-nav .nav-link.active,.hcb-nav .nav-link:hover{color:var(--hcb-marsh)}
 .hcb-hero{background:linear-gradient(135deg,var(--hcb-blush),var(--hcb-sand));border-bottom:1px solid #efe4d9}
 .hcb-hero-home{background:linear-gradient(135deg,#fbe3d8 0%,var(--hcb-sand) 55%,#e4efe9 100%)}
-.hcb-hero-home .py-5{padding-top:5rem!important;padding-bottom:5rem!important}
+.hcb-hero-home .py-5{padding-top:4rem!important;padding-bottom:4rem!important}
+.hcb-hero-img{width:100%;max-width:420px;aspect-ratio:4/3;object-fit:cover;border-radius:1rem;box-shadow:0 .75rem 1.5rem rgba(31,42,43,.1)}
 .breadcrumb a{color:var(--hcb-muted);text-decoration:none}
-.hcb-card{border:1px solid #ece6dd;border-radius:1rem;overflow:hidden;transition:transform .15s,box-shadow .15s}
+
+/* Uniform, compact cards */
+.hcb-card{border:1px solid #ece6dd;border-radius:.85rem;overflow:hidden;transition:transform .15s,box-shadow .15s;max-width:340px;margin-inline:auto;width:100%}
 .hcb-card:hover{transform:translateY(-3px);box-shadow:0 .75rem 1.5rem rgba(31,42,43,.08)}
+.hcb-card-img{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--hcb-sand);display:block}
+.hcb-card .card-body{padding:.9rem 1rem 1rem}
+.hcb-card h3{font-size:1.05rem;margin-bottom:.35rem}
+.hcb-card .card-text{font-size:.9rem;line-height:1.5;color:var(--hcb-muted);margin-bottom:0}
+.hcb-card .badge{font-size:.7rem}
 .hcb-vibe{color:var(--hcb-ink)}
-.hcb-photo{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--hcb-peach),#e9d3c3 50%,#bcd3c8);color:#fff;font-size:2.75rem}
-.hcb-photo-lg{border-radius:1rem;font-size:4rem}
+
+/* Entertainment feature card */
+.hcb-feature{max-width:none;border-color:#f0d3c6;background:var(--hcb-blush)}
+.hcb-feature .hcb-feature-img{width:100%;height:100%;min-height:200px;object-fit:cover;display:block}
+.hcb-feature h3{font-size:1.35rem}
+.hcb-feature .card-text{font-size:.95rem;color:var(--hcb-ink)}
+
 .card-link{color:var(--hcb-marsh);font-weight:600;text-decoration:none}
 .hcb-note{background:var(--hcb-sand);border-radius:1rem;border:1px solid #ece6dd}
 .hcb-alert{background:var(--hcb-blush);border:1px solid #f0d3c6;color:var(--hcb-ink)}
@@ -106,10 +119,14 @@ a:hover{color:var(--hcb-marsh-dark)}
 
   <header class="hcb-hero hcb-hero-home">
     <div class="container">
-      <div class="py-5">
-        <h1 class="display-5">Charleston Bachelorette Ideas for Every Kind of Crew</h1>
-        <img src="/images/bach1.png" style="height:300; width: 300;" alt="">
-        <p class="lead col-lg-8">Boat days, beach towns, rooftop toasts and long Southern brunches. Pick the vibe, then build the weekend around it. Our partner site has a good list of <a href="https://charlestonbacheloretteactivities.com">charleston bachelorette activities</a> for you next trip.</p>
+      <div class="py-5 row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="display-5">Charleston Bachelorette Ideas for Every Kind of Crew</h1>
+          <p class="lead">Boat days, beach towns, rooftop toasts and long Southern brunches. Pick the vibe, then build the weekend around it. Our partner site has a good list of <a href="https://charlestonbacheloretteactivities.com">charleston bachelorette activities</a> for your next trip.</p>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="/images/bach1.png" class="hcb-hero-img" alt="Bachelorette group celebrating in Charleston, SC">
+        </div>
       </div>
     </div>
   </header>
@@ -118,42 +135,42 @@ a:hover{color:var(--hcb-marsh-dark)}
 
       <section class="mb-5">
         <h2 class="h3 mb-4">Pick your vibe</h2>
-        <div class="row g-4">
-          
-          <div class="col-md-6 col-lg-4">
+        <div class="row g-3 g-lg-4">
+
+          <div class="col-6 col-md-4">
             <a href="things-to-do.html" class="card h-100 hcb-card hcb-vibe text-decoration-none">
-              <img src="/images/bach2.png" style="height:200; width: 200;" alt="">
-              <div class="card-body"><h3 class="h5">Things To Do Downtown</h3><p class="card-text">Rainbow Row photos, carriage rides, cooking classes, ghost tours and more daytime plans.</p></div>
+              <img src="/images/bach2.png" class="hcb-card-img" alt="Rainbow Row in downtown Charleston" loading="lazy">
+              <div class="card-body"><h3>Things To Do Downtown</h3><p class="card-text">Rainbow Row photos, carriage rides, cooking classes and ghost tours.</p></div>
             </a>
           </div>
-          <div class="col-md-6 col-lg-4">
+          <div class="col-6 col-md-4">
             <a href="boat-day.html" class="card h-100 hcb-card hcb-vibe text-decoration-none">
-              <img src="/images/bach3.png" style="height:50%; width: 200;" alt="">
-              <div class="card-body"><h3 class="h5">Boat Day</h3><p class="card-text">Private charters, pontoons, sunset cruises and sandbar afternoons on the harbor.</p></div>
+              <img src="/images/bach3.png" class="hcb-card-img" alt="Bachelorette boat day on Charleston Harbor" loading="lazy">
+              <div class="card-body"><h3>Boat Day</h3><p class="card-text">Private charters, pontoons, sunset cruises and sandbar afternoons.</p></div>
             </a>
           </div>
-          <div class="col-md-6 col-lg-4">
+          <div class="col-6 col-md-4">
             <a href="beaches.html" class="card h-100 hcb-card hcb-vibe text-decoration-none">
-              <img src="/images/bach4.png" style="height:200; width: 200;" alt="">
-              <div class="card-body"><h3 class="h5">Beach Towns</h3><p class="card-text">Folly Beach, Isle of Palms and Sullivan's Island, compared for a bachelorette group.</p></div>
+              <img src="/images/bach4.png" class="hcb-card-img" alt="Beach day near Charleston" loading="lazy">
+              <div class="card-body"><h3>Beach Towns</h3><p class="card-text">Folly Beach, Isle of Palms and Sullivan's Island, compared for groups.</p></div>
             </a>
           </div>
-          <div class="col-md-6 col-lg-4">
+          <div class="col-6 col-md-4">
             <a href="nightlife.html" class="card h-100 hcb-card hcb-vibe text-decoration-none">
-              <img src="/images/bach5.png" style="height:200; width: 200;" alt="">
-              <div class="card-body"><h3 class="h5">Nightlife</h3><p class="card-text">Upper King bar hops, rooftop sunsets, live music and late-night dancing.</p></div>
+              <img src="/images/bach5.png" class="hcb-card-img" alt="Rooftop bar at night in Charleston" loading="lazy">
+              <div class="card-body"><h3>Nightlife</h3><p class="card-text">Upper King bar hops, rooftop sunsets, live music and late-night dancing.</p></div>
             </a>
           </div>
-          <div class="col-md-6 col-lg-4">
+          <div class="col-6 col-md-4">
             <a href="brunch.html" class="card h-100 hcb-card hcb-vibe text-decoration-none">
-              <img src="/images/bach6.png" style="height:50%; width: 200;" alt="">
-              <div class="card-body"><h3 class="h5">Brunch</h3><p class="card-text">Mimosa brunches, Southern classics and private chef mornings at the rental.</p></div>
+              <img src="/images/bach6.png" class="hcb-card-img" alt="Bachelorette brunch table with mimosas" loading="lazy">
+              <div class="card-body"><h3>Brunch</h3><p class="card-text">Mimosa brunches, Southern classics and private chef mornings.</p></div>
             </a>
           </div>
-          <div class="col-md-6 col-lg-4">
+          <div class="col-6 col-md-4">
             <a href="itinerary.html" class="card h-100 hcb-card hcb-vibe text-decoration-none">
-              <img src="/images/bach7.png" style="height:200; width: 200;" alt="">
-              <div class="card-body"><h3 class="h5">3-Day Itinerary</h3><p class="card-text">A ready-made Friday-to-Sunday plan you can copy into the group chat.</p></div>
+              <img src="/images/bach7.png" class="hcb-card-img" alt="Charleston bachelorette weekend itinerary" loading="lazy">
+              <div class="card-body"><h3>3-Day Itinerary</h3><p class="card-text">A ready-made Friday-to-Sunday plan to drop in the group chat.</p></div>
             </a>
           </div>
         </div>
@@ -182,43 +199,55 @@ a:hover{color:var(--hcb-marsh-dark)}
 
       <section class="my-5">
         <h2 class="h3 mb-4">Where to base the weekend</h2>
-        <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <article class="card h-100 hcb-card">
-            <!-- Replace .hcb-photo with <img src="img/..." class="card-img-top" alt="Downtown Peninsula"> -->
-            <img src="/images/bach9.png" style="height:200; width: 200;" alt="">
-            <div class="card-body">
-              <span class="badge rounded-pill text-bg-light mb-2">Most popular</span>
-              <h3 class="h5 card-title">Downtown Peninsula</h3>
-              <p class="card-text">Walk to King Street, the Battery and most restaurants. Best for groups that want nightlife without driving.</p>
-              
-            </div>
-          </article>
+        <div class="row g-3 g-lg-4">
+          <div class="col-6 col-md-4">
+            <article class="card h-100 hcb-card">
+              <img src="/images/bach9.png" class="hcb-card-img" alt="Historic downtown Charleston peninsula" loading="lazy">
+              <div class="card-body">
+                <span class="badge rounded-pill text-bg-light mb-2">Most popular</span>
+                <h3 class="card-title">Downtown Peninsula</h3>
+                <p class="card-text">Walk to King Street, the Battery and most restaurants. Nightlife without driving.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-4">
+            <article class="card h-100 hcb-card">
+              <img src="/images/bach10.png" class="hcb-card-img" alt="Shem Creek waterfront in Mount Pleasant" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">Mount Pleasant</h3>
+                <p class="card-text">Bigger rentals, Shem Creek dining and a quick hop to Isle of Palms.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-4">
+            <article class="card h-100 hcb-card">
+              <img src="/images/bach11.png" class="hcb-card-img" alt="Folly Beach shoreline" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">Folly Beach</h3>
+                <p class="card-text">Laid-back beach-town energy with a walkable main strip. Plan rides downtown.</p>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <article class="card h-100 hcb-card">
-            <!-- Replace .hcb-photo with <img src="img/..." class="card-img-top" alt="Mount Pleasant"> -->
-            <img src="/images/bach10.png" style="height:200; width: 200;" alt="">
-            <div class="card-body">
-              
-              <h3 class="h5 card-title">Mount Pleasant</h3>
-              <p class="card-text">Bigger rentals, Shem Creek waterfront dining and an easy hop to Isle of Palms and Sullivan's Island.</p>
-              
+      </section>
+
+      <section class="my-5">
+        <h2 class="h3 mb-4">Add some entertainment</h2>
+        <a href="entertainment.html" class="card hcb-card hcb-feature hcb-vibe text-decoration-none">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="/images/bach8.png" class="hcb-feature-img" alt="Bachelorette party entertainment at a Charleston rental" loading="lazy">
             </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <article class="card h-100 hcb-card">
-            <!-- Replace .hcb-photo with <img src="img/..." class="card-img-top" alt="Folly Beach"> -->
-            <img src="/images/bach11.png" style="height:200; width: 200;" alt="">
-            <div class="card-body">
-              
-              <h3 class="h5 card-title">Folly Beach</h3>
-              <p class="card-text">Laid-back beach-town energy with a walkable main strip. Plan rides for nights downtown.</p>
-              
+            <div class="col-md-7">
+              <div class="card-body p-4">
+                <span class="badge rounded-pill text-bg-light mb-2">Night-in favorite</span>
+                <h3>Bachelorette Entertainment</h3>
+                <p class="card-text mb-3">Private shows at the rental, live DJs, drag brunch, comedy nights and party hosts who keep the energy up. Book early for Saturday nights.</p>
+                <span class="card-link">See entertainment ideas <i class="bi bi-arrow-right"></i></span>
+              </div>
             </div>
-          </article>
-        </div></div>
+          </div>
+        </a>
       </section>
 
   </main>
